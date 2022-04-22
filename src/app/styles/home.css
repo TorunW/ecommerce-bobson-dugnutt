@@ -1,0 +1,10 @@
+.home .wrap {
+  position: relative;
+  top: 200px;
+  left: 10%;
+}
+.home .wrap img {
+  height: 350px;
+  border: solid 5px #447d5c;
+  position: absolute;
+}

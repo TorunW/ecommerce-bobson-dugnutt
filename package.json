@@ -2,6 +2,7 @@
   "name": "online-shop-bobson-dugnutt",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +36,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "node": "^17.7.2",
+    "nodemon": "^2.0.15",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.3.0",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
   }
 }
