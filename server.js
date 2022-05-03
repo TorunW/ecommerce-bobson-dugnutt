@@ -2,6 +2,15 @@ const express = require('express');
 const db = require('./models');
 const app = express();
 
+app.use(express.json());
+
+// Routers
+const pageRouter = require('./routes/pages');
+app.use('/pages', pageRouter);
+
+const postRouter = require('./routes/posts');
+app.use('/posts', postRouter);
+
 db.sequelize.sync().then(() => {
   app.listen(8080, () => {
     console.log('server is running on port 8080');
@@ -18,19 +27,6 @@ database:
     CONSTRAINT link_unique UNIQUE (link)
 
 
-  Post
-    Post id
-    page id
-    title optional
-    content
-    type (image text link)
-    order
-     CONSTRAINT post_id_unique UNIQUE (post_id)
 
   Store
-
-
-
-
-
 */
