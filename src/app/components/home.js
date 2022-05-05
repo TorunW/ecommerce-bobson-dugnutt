@@ -1,8 +1,10 @@
+import React from 'react';
+
 function Home(props) {
   return (
-    <div className='home'>
-      <img src='public/album.jpg' />
-    </div>
+    <main id='home' className='home'>
+      <img src='/album.jpg' alt='cover art for ep' />
+    </main>
   );
 }
 

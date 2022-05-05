@@ -1,8 +1,11 @@
 const express = require('express');
-const db = require('./models');
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
+
+const db = require('./models');
 
 // Routers
 const pageRouter = require('./routes/pages');
@@ -16,17 +19,3 @@ db.sequelize.sync().then(() => {
     console.log('server is running on port 8080');
   });
 });
-
-/*
-database:
-
-  Pages
-    Titlte
-    Link
-    Order
-    CONSTRAINT link_unique UNIQUE (link)
-
-
-
-  Store
-*/

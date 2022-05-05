@@ -1,38 +1,30 @@
-.header {
-  height: 6.5rem;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-
-  .wrap {
-    margin: 0 auto;
-    height: 100%;
-    position: relative;
+.navigation {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  .logo-wrapper {
     .logo {
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      transform: translateY(-50%);
-
       img {
+        width: 70px;
         border-radius: 50%;
-        width: 60px;
-        display: block;
+        margin: 0.2em 0.9em;
       }
     }
+  }
 
-    .menu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      gap: 30px;
-      font-family: 'Bebas Neue';
-      font-size: 30px;
+  .menu-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-      div {
-        color: aliceblue;
-      }
+    a {
+      margin: 0 0.9em;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: rgb(253, 253, 253);
+      font-family: 'Bebas neue';
+      font-size: 25px;
     }
   }
 }

@@ -38,14 +38,17 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.27.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "formik": "^2.2.9",
     "mysql2": "^2.3.3",
     "node": "^17.7.2",
     "nodemon": "^2.0.15",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
     "sequelize": "^6.19.0",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "yup": "^0.32.11"
   }
 }

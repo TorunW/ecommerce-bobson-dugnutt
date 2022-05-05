@@ -8,9 +8,9 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const post = req.body;
-  await Pages.create(post);
-  res.json(post);
+  const page = req.body;
+  await Pages.create(page);
+  res.json(page);
 });
 
 module.exports = router;

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Shop(props) {
   return (
     <div className='shop'>
@@ -10,3 +12,11 @@ function Shop(props) {
 }
 
 export default Shop;
+/* 
+Image
+price
+description
+title
+quantity
+size
+*/
