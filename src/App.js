@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 // frontend pages
-import Header from './app/components/Header';
-import Home from './app/components/Home';
-import Shop from './app/components/Merch';
+import Header from './app/components/pages/Header';
+import Home from './app/components/pages/Home';
+import Shop from './app/components/pages/Merch';
 
 // admin pages
 import Admin from './app/components/admin/Admin';
@@ -32,7 +32,11 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/admin/pageform' element={<PageForm />} />
-          <Route path='/admin/postform' element={<PostForm />} />
+          <Route path='/admin/page/:id/postform' element={<PostForm />} />
+          <Route
+            path='/admin/page/:id/postform/:postId'
+            element={<PostForm />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

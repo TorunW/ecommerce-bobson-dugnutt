@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 function PostForm() {
+  const [allPosts, setAllPosts] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/posts').then((response) => {
+      setAllPosts(response.data);
+    });
+  }, []);
+
   const initialValues = {
     title: '',
     type: '',
     content: '',
     order: '',
-    page: '',
+    page: id,
   };
 
   const validatonSchema = Yup.object().shape({
@@ -26,6 +35,18 @@ function PostForm() {
       console.log(response.data);
     });
   }
+
+  let postDisplay = allPosts.map((post, index) => {
+    console.log(post.page, 'hello');
+    if (post.page === id) {
+      return (
+        <div key={index}>
+          <div>{post.title}</div>
+          <div>{post.page}</div>
+        </div>
+      );
+    }
+  });
 
   return (
     <div>
@@ -52,6 +73,7 @@ function PostForm() {
           <button type='submit'>Create Post</button>
         </Form>
       </Formik>
+      {postDisplay}
     </div>
   );
 }

@@ -18,13 +18,14 @@ function AdminHeader(props) {
         return (
           <ul>
             <li>{value.title}</li>
+            <Link to={`/admin/page/${value.id}/postform`}>
+              edit content on {value.title}
+            </Link>
             <button>delete page</button>
-            <a>edit content on {value.title}</a>
           </ul>
         );
       })}
       <Link to='/admin/pageform'>Create a page +</Link>
-      <Link to='/admin/postform'>Create a post +</Link>
     </div>
   );
 }
