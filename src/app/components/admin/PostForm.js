@@ -10,6 +10,7 @@ function PostForm() {
     type: '',
     content: '',
     order: '',
+    page: '',
   };
 
   const validatonSchema = Yup.object().shape({
@@ -17,11 +18,12 @@ function PostForm() {
     type: Yup.string().required(),
     content: Yup.string().required(),
     order: Yup.number().required(),
+    page: Yup.number().required(),
   });
 
   function onSubmit(data) {
     axios.post('http://localhost:8080/posts', data).then((response) => {
-      console.log('works');
+      console.log(response.data);
     });
   }
 
@@ -45,6 +47,8 @@ function PostForm() {
           <Field name='content' placeholder='This will be text editor'></Field>
           <label>Order of apperance</label>
           <Field name='order' placeholder='Ex. 1' />
+          <label>Page</label>
+          <Field name='page' placeholder='Ex. 1' />
           <button type='submit'>Create Post</button>
         </Form>
       </Formik>

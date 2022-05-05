@@ -18,7 +18,7 @@ function PageForm() {
 
   function onSubmit(data) {
     axios.post('http://localhost:8080/pages', data).then((response) => {
-      console.log('itork');
+      console.log(response.data);
     });
   }
 
