@@ -1,0 +1,22 @@
+.edit-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2em 2em;
+}
+.edit-page .form {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  padding: 1em;
+  width: 400px;
+}
+.edit-page .form label,
+.edit-page .form input {
+  margin: 0.3em 0;
+}
+.edit-page .post-container {
+  border: solid;
+  width: 600px;
+  padding: 1em;
+}

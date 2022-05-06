@@ -7,6 +7,12 @@ router.get('/', async (req, res) => {
   res.json(listOfPosts);
 });
 
+router.get('/:id', async (req, res) => {
+  console.log(req.params);
+  const listOfPosts = await Posts.findAll({ where: { page: req.params.id } });
+  res.json(listOfPosts);
+});
+
 router.post('/', async (req, res) => {
   const post = req.body;
   await Posts.create(post);

@@ -1,0 +1,40 @@
+#admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Bebas Neue';
+}
+#admin .header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+#admin .menu-container {
+  border: solid;
+  width: 30em;
+  padding: 0 5em;
+  text-align: center;
+}
+#admin .menu-container .menu-item-wrapper {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+#admin .menu-container .menu-item-wrapper .menu-item {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+}
+#admin .menu-container .menu-item-wrapper a {
+  text-transform: uppercase;
+  font-size: 20px;
+  border: solid 1px;
+  margin: 0.2em 0;
+  padding: 0.2em 0 0.1em;
+}
+#admin .menu-container .create-btn {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 3em;
+}

@@ -30,13 +30,14 @@ function App() {
         {headerDisplay}
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/admin' element={<Admin />} />
+          <Route path='/admin/editpages' element={<Admin />} />
           <Route path='/admin/pageform' element={<PageForm />} />
+          <Route path='/admin/page/:id/pageform' element={<PageForm />} />
           <Route path='/admin/page/:id/postform' element={<PostForm />} />
-          <Route
+          {/* <Route
             path='/admin/page/:id/postform/:postId'
             element={<PostForm />}
-          />
+          /> */}
         </Routes>
       </BrowserRouter>
     </div>
